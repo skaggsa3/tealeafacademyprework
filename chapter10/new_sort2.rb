@@ -9,7 +9,7 @@ def my_sort words
 
 		words.delete_at(index_val)
 	end
-	p sorted.sort
+	#p sorted.sort
 	sorted
 end
 
