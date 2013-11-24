@@ -1,4 +1,6 @@
 class Die
+	attr_accessor :number_showing
+
 	def initialize
 		roll
 	end
@@ -11,16 +13,27 @@ class Die
 		@number_showing
 	end
 
-	def cheating sides
-		@number_showing = sides
+	# def cheating sides
+	# 	@number_showing = sides
+	# 	if @number_showing > 6
+	# 		puts "no no no, your cheating!"
+	# 	else
+	# 		showing
+	# 	end
+	# end
+	def cheating
 		if @number_showing > 6
-			puts "no no no, your cheating!"
+			puts "your cheating"
 		else
 			showing
 		end
 	end
+
 end
 
 puts Die.new.showing
-puts Die.new.cheating(7) #---> Will fail
-puts Die.new.cheating(3)
+# puts Die.new.cheating(7) #---> Will fail
+# puts Die.new.cheating(3)
+d = Die.new
+d.number_showing = 7
+puts d.cheating
